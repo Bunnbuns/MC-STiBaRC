@@ -46,8 +46,8 @@ function updateNavDropdownContent() {
 	if (loggedIn) {
 		$("loggedInAs").innerHTML = localStorage.getItem("username");
 		$("loggedInAs").title = "Logged in as " + localStorage.getItem("username");
-		$("loggedInAs").href = "./user.html?id=" + localStorage.getItem("username");
-		$("navpfp").title = "Logged in as " + localStorage.getItem("username");
+		//$("loggedInAs").href = "./user.html?id=" + localStorage.getItem("username");
+		//$("navpfp").title = "Logged in as " + localStorage.getItem("username");
 	}
 }
 
@@ -126,7 +126,7 @@ function getUserPfp(callback, username) {
 			$("postPfp").src = userPfp;
 		} else {
 			localStorage.setItem("pfp", userPfp);
-			$("navpfp").src = localStorage.getItem("pfp");
+			//$("navpfp").src = localStorage.getItem("pfp");
 		}
 	};
 	xhttp.open("GET", "https://api.stibarc.com/v2/getuserpfp.sjs?id=" + username, true);
@@ -224,6 +224,6 @@ function getAllUrlParams(url) {
 	return obj;
 }
 
-// if(loggedIn) {
-//     getUserInfo();
-// }
+if(loggedIn) {
+    getUserInfo();
+}

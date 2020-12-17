@@ -260,6 +260,27 @@ a {
 	font-family: Minecraft, sans-serif;
 }
 
+.dropdown {
+	padding: 1px 0;
+	cursor: pointer;
+}
+
+.dropdown > span {
+	margin-right: 8px;
+	text-overflow: ellipsis;
+}
+
+.dropdown-arrow {
+	display: inline-block;
+    background: transparent url(../images/stats_icons.png) -19px 0px;
+    width: 16px;
+    height: 16px;
+	image-rendering: pixelated;
+	-ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+}
+
 .tool-tip {
     color: #fff;
     background-color: #110210;
