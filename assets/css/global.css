@@ -11,6 +11,7 @@
 body {
 	background: #18100a url("../images/dirt.png") repeat;
 	background-size: 64px;
+    image-rendering: pixelated;
 	color: #fcfcfc;
 	font-family: Minecraft, sans-serif;
 	margin: 0;
@@ -287,6 +288,15 @@ a {
     border: 4px solid;
     border-image: url(../images/mc-tooltip-border-12x12.png) 4 repeat;
     padding: 3px 4px 4px 4px;
+	background-clip: padding-box;
+    image-rendering: pixelated;
+}
+
+.box-border {
+    background-color: #c6c6c6;
+    border: 12px solid;
+    border-image: url(../images/border.png) 6 repeat;
+    image-rendering: pixelated;
     background-clip: padding-box;
 }
 
