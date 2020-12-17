@@ -22,13 +22,24 @@ var loggedIn = false;
 if (sess !== null && sess !== "") {
 	loggedIn = true;
 }
-// if(loggedIn) {
-//     $("loggedOut").style.display = "none";
-//     $("loggedIn").style.display = "flex";
-// } else {
-//     $("loggedOut").style.display = "flex";
-//     $("loggedIn").style.display = "none";
-// }
+
+const loggedOutDivs = $(".loggedout");
+const loggedInDivs = $(".loggedin");
+if(loggedIn) {
+    for (var i = 0; i < loggedInDivs.length; i++) {
+        loggedInDivs[i].style.display = "";
+    }
+    for (var i = 0; i < loggedOutDivs.length; i++) {
+        loggedOutDivs[i].style.display = "none";
+    }
+} else {
+    for (var i = 0; i < loggedInDivs.length; i++) {
+        loggedInDivs[i].style.display = "none";
+    }
+    for (var i = 0; i < loggedOutDivs.length; i++) {
+        loggedOutDivs[i].style.display = "";
+    }
+}
 
 // nav dropdown //
 function updateNavDropdownContent() {
