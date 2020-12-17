@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8" />
+    <title>STiBaRC</title>
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <link rel="icon" type="image/png" href="./fav.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-title" content="STiBaRC">
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+
+</head>
+<body>
+
+    <div class="page-height">
+
+        <nav class="nav light-bg">
+            <div class="container flex">
+                <a href="#" class="logo">
+                    <img src="./assets/images/pixel-logo.png"><span>STiBaRC</span>
+                </a>
+                <span class="flex-grow"></span>
+                <div>
+                    <a class="mc-button small" href="./login.html"> <span>Log in</span> </a>
+                    &nbsp;
+                    <a class="mc-button small" href="#"> <span>Sign up</span> </a>
+                </div>
+            </div>
+        </nav>
+    
+        <main class="container nav-margin">
+            <div class="flex" style="align-items: inital;">
+                <h2 class="text-sh">Recent Posts:</h2>
+                <span class="flex-grow"></span>
+                <span><button id="selectfeed" class="mc-button x-small"><span>Feed:&nbsp;&nbsp;<span id="selectfeedtext">GLOBAL</span></span></button>
+            </div>
+    
+            <div id="blob">
+    
+                <div id="posts"></div>
+    
+                <div id="loadmorecontainer" style="display: none;"><button onclick="loadMore();" class="mc-button block"><span>Load more</span></button></div>
+    
+            </div>
+    
+            <div id="followblob" style="display:none;">
+    
+                <div id="followedposts">
+                    <div><a href="login.html">Log in</a> to get your followed feed.</div>
+                </div>
+    
+                <div id="followloadmorecontainer" style="display: none;"><button onclick="loadMoreFollow();" class="mc-button small block"><span>Load more</span></button></div>
+    
+            </div>
+    
+            <br><br><br><br>
+    
+        </main>
+    
+    </div><!-- /page-height -->
+    
+    <footer class="footer light-bg fixed">
+        <div class="container flex light-text text-sh">
+            <span><a href="https://stibarc.com/privacy.html">Privacy</a><span>&nbsp;|&nbsp;</span><a href="https://stibarc.com/tos.html">ToS</a></span>
+            <span class="flex-grow"></span>
+            <span>Copyright <a href="https://team.stibarc.com">STiBaRC Team</a></span>
+        </div>
+    </footer>
+
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+@font-face {
+	font-family: "Minecraft";
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://apis.buncode.com/fonts/minecraft_font.eot") format("eot"),
+		url("https://apis.buncode.com/fonts/minecraft_font.woff") format("woff"),
+		url("https://apis.buncode.com/fonts/minecraft_font.ttf") format("truetype"),
+		url("https://apis.buncode.com/fonts/minecraft_font.svg#Minecraft") format("svg");
+}
+
+body {
+	background: #18100a url("../images/dirt.png") repeat;
+	background-size: 64px;
+	color: #fcfcfc;
+	font-family: Minecraft, sans-serif;
+	margin: 0;
+	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+	/* width */
+	width: 16px;
+	height: 16px;
+}
+::-webkit-scrollbar-track {
+	/* Track */
+	background: #000;
+}
+::-webkit-scrollbar-thumb {
+	/* Handle */
+	background: #c0c0c0;
+	border-bottom: 2px inset #808080;
+	border-right: 3px inset #808080;
+}
+::-webkit-scrollbar-thumb:hover {
+	/* Handle on hover */
+	background: #c0c0c0;
+}
+
+.vam {
+	vertical-align: middle;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.flex-grow {
+	display: flex;
+	flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.light-bg {
+	background: #2e2015 url("../images/dirt-light.png") repeat;
+	background-size: 64px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.93);
+}
+
+.mc-button {
+	outline: 2px solid black;
+	display: inline-block;
+	background: #6d6d6d url("../images/button_center.png") repeat;
+	padding: 8px 28px 4px 28px;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px #3e3e3e;
+	border-bottom: 4px solid #565656;
+	border-right: 2px solid #565656;
+	border-left: 2px solid #aaa;
+	border-top: 2px solid #aaa;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: Minecraft, sans-serif;
+	font-size: inherit;
+	font-weight: 400;
+	-webkit-user-select: none;
+	cursor: default;
+	outline-offset: 0;
+}
+
+.mc-button > span {
+	position: relative;
+	bottom: 3px;
+	text-decoration: none;
+	cursor: default;
+}
+
+.mc-button:hover {
+	outline: 2px solid #fff;
+}
+
+.mc-button.small {
+	padding: 7px 28px 3px 28px;
+}
+
+.mc-button.x-small {
+	padding: 5px 18px 1px 18px;
+	font-size: 95%;
+}
+
+.mc-button.block {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.text-sh {
+	text-shadow: 2px 2px #3e3e3e;
+}
+
+.light-text {
+	color: #9e9e9e;
+}
+
+.light-text.text-sh {
+	text-shadow: 2px 2px #282828;
+}
+
+.center {
+	text-align: center;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	box-sizing: border-box;
+}
+
+.margin-small {
+	min-height: 15px;
+}
+
+.margin-x-large {
+	min-height: 50px;
+}
+
+.emoji {
+	max-width: 32px;
+	max-height: 32px;
+	vertical-align: middle;
+}
+
+.page-height {
+	min-height: calc(100vh - 145px);
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+
+.nav .container {
+	min-height: 60px;
+}
+
+.nav-height {
+	margin-top: 60px;
+}
+
+.nav-margin {
+	margin-top: 72px;
+}
+
+.nav .logo {
+	color: #fcfcfc;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+.nav .logo span {
+	padding: 2px 0;
+	margin: 0;
+	text-shadow: 2px 2px #3e3e3e;
+}
+
+.nav .logo img {
+	height: 26px;
+	image-rendering: pixelated;
+	flex-shrink: 0;
+	margin-right: 8px;
+	-webkit-filter: drop-shadow(1px 1px #3e3e3e);
+}
+
+@media only screen and (max-width: 420px) {
+	.nav .logo span {
+		display: none;
+	}
+	.nav .logo img {
+		height: 28px;
+	}
+}
+
+.footer {
+	margin-top: 15px;
+    padding: 18px 0;
+}
+
+.footer.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.form {
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+.text-input {
+	background-color: #000;
+	color: #dddddd;
+	font-size: 16px;
+	font-family: Minecraft, sans-serif;
+	padding: 9px 9px 11px 9px;
+	border: none;
+	outline: 2px solid #a0a0a0;
+	box-sizing: border-box;
+}
+
+.text-input.block {
+	width: 100%;
+}
+
+.text-input:focus {
+	outline: 2px solid #fff;
+}
+
+.text-input::placeholder {
+	font-family: Minecraft, sans-serif;
+}
+
+#posts,
+#followedposts {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+.post {
+	display: block;
+	text-decoration: none;
+	min-height: 50px;
+	padding: 3px 4px;
+	margin-bottom: 2px;
+	cursor: default;
+}
+
+.post a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.post:focus {
+	outline: #808080 solid 2px;
+	background-color: #000;
+}

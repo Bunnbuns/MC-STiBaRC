@@ -1,2 +1,2 @@
 # MC-STiBaRC
- Java Minecraft themed STiBaRC client
+Minecraft themed STiBaRC client
