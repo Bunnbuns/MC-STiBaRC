@@ -16,14 +16,7 @@ $("selectfeed").onclick = function () {
 function emojiPost(text) {
 	for (var emoji in emojiIndex) {
 		var re = new RegExp("\\:" + emoji + "\\:", "g");
-		text = text.replace(
-			re,
-			'<img src="https://cdn.stibarc.com/emojis/' +
-				emojiIndex[emoji].filename +
-				'" class="emoji" title=":' +
-				emoji +
-				':"></img>'
-		);
+		text = text.replace(re, '<img src="https://cdn.stibarc.com/emojis/' + emojiIndex[emoji].filename + '" class="emoji" title=":' + emoji + ':"></img>');
 	}
 	return text;
 }
@@ -126,11 +119,7 @@ function loadFollowedPosts() {
 				"It looks like you aren't following anyone, or nobody has posted yet.";
 		}
 	};
-	xhttp.open(
-		"get",
-		"https://api.stibarc.com/v3/getfollowposts.sjs?sess=" + sess,
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/v3/getfollowposts.sjs?sess=" + sess, true);
 	xhttp.send(null);
 }
 
@@ -151,11 +140,7 @@ function loadMore() {
 			$("loadmorecontainer").style.display = "none";
 		}
 	};
-	xhttp.open(
-		"GET",
-		"https://api.stibarc.com/v2/getposts.sjs?id=" + lastid,
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/v2/getposts.sjs?id=" + lastid, true);
 	xhttp.send(null);
 }
 
@@ -176,14 +161,7 @@ function loadMoreFollow() {
 			$("followloadmorecontainer").style.display = "none";
 		}
 	};
-	xhttp.open(
-		"GET",
-		"https://api.stibarc.com/v3/getfollowposts.sjs?sess=" +
-			sess +
-			"&id=" +
-			lastfollowid,
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/v3/getfollowposts.sjs?sess=" + sess + "&id=" + lastfollowid, true);
 	xhttp.send(null);
 }
 

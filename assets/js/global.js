@@ -87,11 +87,7 @@ var popuped = false;
 function loginPopUp() {
 	if (!popuped) {
 		popuped = true;
-		var loginpopup = window.open(
-			"https://stibarc.com/login/",
-			"",
-			"menubar=no,location=no,resizable=no,scrollbars=yes,status=yes,height=360,width=500"
-		);
+		var loginpopup = window.open("https://stibarc.com/login/", "", "menubar=no,location=no,resizable=no,scrollbars=yes,status=yes,height=360,width=500");
 		window.addEventListener("message", function (evt) {
 			if (evt.data != "Cancelled") {
 				localStorage.sess = evt.data;
@@ -117,12 +113,7 @@ function getUserInfo() {
 		updateNavDropdownContent();
 		getUserPfp("navpfp", localStorage.getItem("username"));
 	};
-	xhttp.open(
-		"GET",
-		"https://api.stibarc.com/v2/getusername.sjs?sess=" +
-			localStorage.getItem("sess"),
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/v2/getusername.sjs?sess=" + localStorage.getItem("sess"), true);
 	xhttp.send();
 }
 
@@ -138,11 +129,7 @@ function getUserPfp(callback, username) {
 			$("navpfp").src = localStorage.getItem("pfp");
 		}
 	};
-	xhttp.open(
-		"GET",
-		"https://api.stibarc.com/v2/getuserpfp.sjs?id=" + username,
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/v2/getuserpfp.sjs?id=" + username, true);
 	xhttp.send();
 }
 
@@ -167,11 +154,7 @@ function logout() {
 			alert("Logout may have failed (Request error: " + tmp + ")");
 		}
 	};
-	xhttp.open(
-		"GET",
-		"https://api.stibarc.com/logout.sjs?sess=" + localStorage.getItem("sess"),
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/logout.sjs?sess=" + localStorage.getItem("sess"), true);
 	xhttp.send();
 }
 
@@ -183,24 +166,12 @@ function checkVerified(poster) {
 			$("verified").style.display = "";
 		}
 	};
-	xhttp.open(
-		"GET",
-		"https://api.stibarc.com/checkverify.sjs?id=" + poster,
-		true
-	);
+	xhttp.open("GET", "https://api.stibarc.com/checkverify.sjs?id=" + poster, true);
 	xhttp.send(null);
 }
 
 function emojiHTML(emoji) {
-	return (
-		'<img src="https://cdn.stibarc.com/emojis/' +
-		emojiIndex[emoji].filename +
-		'" class="emoji" title=":' +
-		emoji +
-		':" alt=":' +
-		emoji +
-		':">'
-	);
+	return ('<img src="https://cdn.stibarc.com/emojis/' + emojiIndex[emoji].filename + '" class="emoji" title=":' + emoji + ':" alt=":' + emoji + ':">');
 }
 
 function updateEmojiIndex(callback) {
