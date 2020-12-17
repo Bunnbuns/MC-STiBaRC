@@ -126,11 +126,19 @@ a {
 }
 
 .light-text {
-	color: #9e9e9e;
+	color: #9e9e9e!important;
 }
 
 .light-text.text-sh {
 	text-shadow: 2px 2px #282828;
+}
+
+.red-text {
+    color: #a80000!important;
+}
+
+.red-text.text-sh {
+    text-shadow: 2px 2px #2f2f2f;
 }
 
 .center {
@@ -250,6 +258,15 @@ a {
 
 .text-input::placeholder {
 	font-family: Minecraft, sans-serif;
+}
+
+.tool-tip {
+    color: #fff;
+    background-color: #110210;
+    border: 4px solid;
+    border-image: url(../images/mc-tooltip-border-12x12.png) 4 repeat;
+    padding: 3px 4px 4px 4px;
+    background-clip: padding-box;
 }
 
 #posts,

@@ -23,14 +23,20 @@
             <h2 class="text-sh center">Log in</h2>
             <br>
             <div class="form">
+
+                <div class="red-text text-sh center" id="errorMsg" style="display: none;"></div>
+
                 <h2 class="text-sh light-text">Username</h2>
-                <input class="text-input text-sh block" type="text" autofocus>
+                <input class="text-input text-sh block" id="username" type="text" autofocus>
+
                 <h2 class="text-sh light-text">Password</h2>
-                <input class="text-input text-sh block" type="password">
+                <input class="text-input text-sh block" id="password" type="password">
+                
                 <div class="margin-x-large"></div>
-                <button class="mc-button block"><span>Submit</span></button>
+                <button class="mc-button block" id="login"><span>Submit</span></button>
                 <div class="margin-small"></div>
                 <a class="mc-button block" href="./index.html"><span>Cancel</span></a>
+                
             </div>
             <div class="margin-small"></div>
         </main>
@@ -43,6 +49,7 @@
     </div>
 
     <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/login.js"></script>
 
 </body>
 </html>
