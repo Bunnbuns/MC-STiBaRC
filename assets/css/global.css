@@ -132,6 +132,10 @@ a {
 	text-shadow: 2px 2px #282828;
 }
 
+.dark-text {
+	color: #404040!important;
+}
+
 .red-text {
     color: #a80000!important;
 }
@@ -157,6 +161,21 @@ a {
 
 .margin-x-large {
 	min-height: 50px;
+}
+
+.box-border {
+    background-color: #c6c6c6;
+    border: 8px solid;
+    border-image: url(../images/border.png) 4 repeat;
+    image-rendering: pixelated;
+    background-clip: padding-box;
+}
+
+.inner-box-border {
+	background-color: #8b8b8b;
+    border: 8px solid;
+    border-image: url(../images/inner-border.png) 3 repeat;
+    image-rendering: pixelated;
 }
 
 .emoji {
@@ -214,16 +233,20 @@ a {
     left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
+	z-index: 101;
 }
 
 .nav-dropdown {
 	float: right;
 	text-align: left;
-	z-index: 1001;
-    background-color: #6c6c6c;
     color: #fcfcfc;
-    padding: 15px 0 10px 0;
-    min-width: 9.5rem;
+	min-width: 9.5rem;
+	z-index: 102;
+}
+
+.nav-dropdown .inner-box-border {
+	padding: 15px 0 15px 0;
+	margin: 4px;
 }
 
 @media only screen and (max-width: 420px) {
@@ -309,14 +332,6 @@ a {
     padding: 3px 4px 4px 4px;
 	background-clip: padding-box;
     image-rendering: pixelated;
-}
-
-.box-border {
-    background-color: #c6c6c6;
-    border: 8px solid;
-    border-image: url(../images/border.png) 4 repeat;
-    image-rendering: pixelated;
-    background-clip: padding-box;
 }
 
 #posts,
