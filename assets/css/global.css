@@ -172,9 +172,9 @@ a {
 }
 
 .inner-box-border {
-	background-color: #8b8b8b;
-    border: 8px solid;
-    border-image: url(../images/inner-border.png) 3 repeat;
+    background-color: #8b8b8b;
+    border: 2px solid;
+    border-image: url(../images/inner-border.png) 1 repeat;
     image-rendering: pixelated;
 }
 
@@ -239,13 +239,15 @@ a {
 .nav-dropdown {
 	float: right;
 	text-align: left;
+	background-color: #c6c6c6;
     color: #fcfcfc;
 	min-width: 9.5rem;
 	z-index: 102;
+	margin-top: -6px;
 }
 
 .nav-dropdown .inner-box-border {
-	padding: 15px 0 15px 0;
+	padding: 0;
 	margin: 4px;
 }
 
@@ -322,6 +324,16 @@ a {
 	-ms-transform: scale(2, 2);
     -webkit-transform: scale(2, 2);
     transform: scale(2, 2);
+}
+
+.dropdown-arrow.active {
+	background: transparent url(../images/stats_icons.png) -36px 0px;
+}
+
+.dropdown .dropdown-item {
+	display: block;
+	padding: 2px 4px;
+	background-color: #b8b8b8;
 }
 
 .tool-tip {
