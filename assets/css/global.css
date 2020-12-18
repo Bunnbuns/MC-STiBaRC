@@ -79,7 +79,7 @@ a {
 	outline: 2px solid black;
 	display: inline-block;
 	background: #6d6d6d url("../images/button_center.png") repeat;
-	padding: 8px 28px 4px 28px;
+	padding: 7px 28px 7px 28px;
 	text-align: center;
 	color: white;
 	text-shadow: 2px 2px #3e3e3e;
@@ -98,8 +98,6 @@ a {
 }
 
 .mc-button > span {
-	position: relative;
-	bottom: 3px;
 	text-decoration: none;
 	cursor: default;
 }
@@ -109,11 +107,11 @@ a {
 }
 
 .mc-button.small {
-	padding: 7px 28px 3px 28px;
+	padding: 5px 28px 5px 28px;
 }
 
 .mc-button.x-small {
-	padding: 5px 18px 1px 18px;
+	padding: 5px 18px 5px 18px;
 	font-size: 95%;
 }
 
@@ -175,7 +173,7 @@ a {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 10000;
+	z-index: 100;
 }
 
 .nav .container {
@@ -183,11 +181,11 @@ a {
 }
 
 .nav-height {
-	margin-top: 60px;
+	min-height: 60px;
 }
 
 .nav-margin {
-	margin-top: 72px;
+	min-height: 72px;
 }
 
 .nav .logo {
@@ -209,6 +207,23 @@ a {
 	flex-shrink: 0;
 	margin-right: 8px;
 	-webkit-filter: drop-shadow(1px 1px #3e3e3e);
+}
+
+.nav-dropdown-container {
+    position: fixed;
+    left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+}
+
+.nav-dropdown {
+	float: right;
+	text-align: left;
+	z-index: 1001;
+    background-color: #6c6c6c;
+    color: #fcfcfc;
+    padding: 15px 0 10px 0;
+    min-width: 9.5rem;
 }
 
 @media only screen and (max-width: 420px) {
@@ -261,12 +276,16 @@ a {
 	font-family: Minecraft, sans-serif;
 }
 
-.dropdown {
+.dropdown-btn {
 	padding: 1px 0;
 	cursor: pointer;
 }
 
-.dropdown > span {
+.dropdown-btn > span {
+	margin-right: 4px;
+}
+
+.dropdown-btn span:first-child {
 	margin-right: 8px;
 	text-overflow: ellipsis;
 }
@@ -294,8 +313,8 @@ a {
 
 .box-border {
     background-color: #c6c6c6;
-    border: 12px solid;
-    border-image: url(../images/border.png) 6 repeat;
+    border: 8px solid;
+    border-image: url(../images/border.png) 4 repeat;
     image-rendering: pixelated;
     background-clip: padding-box;
 }

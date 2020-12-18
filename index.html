@@ -30,14 +30,24 @@
                 </div>
                 <div class="loggedin">
                     <!-- <button class="mc-button small" onclick="logout()"><span>Log out</span></button> -->
-                    <div class="dropdown">
+                    <div class="dropdown-btn" id="navDropdownBtn">
                         <span id="loggedInAs" class="text-sh"></span><span class="dropdown-arrow"></span>
                     </div>
                 </div>
             </div>
         </nav>
-    
-        <main class="container nav-margin">
+
+        <div class="nav-height"></div>
+
+        <div class="container nav-dropdown-container">
+            <div class="dropdown nav-dropdown box-border" id="navDropdown" style="display: none;">
+
+            </div>
+        </div>
+ 
+        <div class="margin-small"></div>
+
+        <main class="container">
             <div class="flex" style="align-items: inital;">
                 <h2 class="text-sh">Recent Posts:</h2>
                 <span class="flex-grow"></span>

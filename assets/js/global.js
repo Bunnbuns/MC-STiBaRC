@@ -56,23 +56,23 @@ click_stereo.src = "http://apis.buncode.com/minecraft/sounds/click_stereo.ogg";
 click_stereo.volume = 0.15;
 const mcButtons = $(".mc-button");
 // nav dropdown display //
-// var pfpNavDropdown = $("pfpNavDropdown");
-// var navDropdown = $("navDropdown");
+var navDropdownBtn = $("navDropdownBtn");
+var navDropdown = $("navDropdown");
 document.addEventListener("click", function (event) {
-	// 	var isClickInside = pfpNavDropdown.contains(event.target);
-	// 	var navDropdownContent = navDropdown.contains(event.target);
-	// 	if ($("navDropdown").style.display == "none" || navDropdownContent) {
-	// 		$("navDropdown").style.display = "block";
-	// 		$("pfpNavDropdown").classList.add("active");
-	// 	} else {
-	// 		$("navDropdown").style.display = "none";
-	// 		$("pfpNavDropdown").classList.remove("active");
-	// 	}
-	// 	if (!isClickInside && !navDropdownContent) {
-	// 		//the click was outside the nav dropdown
-	// 		$("navDropdown").style.display = "none";
-	// 		$("pfpNavDropdown").classList.remove("active");
-	// 	}
+		var isClickInside = navDropdownBtn.contains(event.target);
+		var navDropdownContent = navDropdown.contains(event.target);
+		if (navDropdown.style.display == "none" || navDropdownContent) {
+			navDropdown.style.display = "block";
+			navDropdownBtn.classList.add("active");
+		} else {
+			navDropdown.style.display = "none";
+			navDropdownBtn.classList.remove("active");
+		}
+		if (!isClickInside && !navDropdownContent) {
+			//the click was outside the nav dropdown
+			navDropdown.style.display = "none";
+			navDropdownBtn.classList.remove("active");
+		}
 	for (var i = 0; i < mcButtons.length; i++) {
 		var buttonClicked = mcButtons[i].contains(event.target);
 		if (buttonClicked) {
