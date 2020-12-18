@@ -30,7 +30,7 @@
                 </div>
                 <div class="loggedin">
                     <!-- <button class="mc-button small" onclick="logout()"><span>Log out</span></button> -->
-                    <div class="dropdown-btn" id="navDropdownBtn">
+                    <div class="dropdown-btn" id="navDropdownBtn" tabindex="1">
                         <span id="loggedInAs" class="text-sh"></span><span class="dropdown-arrow"></span>
                     </div>
                 </div>
@@ -44,6 +44,7 @@
                 <div class="inner-box-border">
                     <a class="dropdown-item" href="#"><span>Profile</span></a>
                     <a class="dropdown-item" href="#"><span>Settings</span></a>
+                    <div class="dropdown-item" onclick="logout()"><span>Logout</span></div>
                 </div>
             </div>
         </div>

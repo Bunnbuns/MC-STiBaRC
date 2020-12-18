@@ -241,7 +241,7 @@ a {
 	text-align: left;
 	background-color: #c6c6c6;
     color: #fcfcfc;
-	min-width: 9.5rem;
+	min-width: 10rem;
 	z-index: 102;
 	margin-top: -6px;
 }
@@ -304,6 +304,7 @@ a {
 .dropdown-btn {
 	padding: 1px 0;
 	cursor: pointer;
+	outline: none;
 }
 
 .dropdown-btn > span {
@@ -332,13 +333,14 @@ a {
 
 .dropdown .dropdown-item {
 	display: block;
-	padding: 6px 8px 7px 8px;
+	padding: 6px 8px 8px 8px;
 	background-color: #8b8b8b;
 	font-size: 90%;
+	cursor: pointer;
 }
 
 .dropdown .dropdown-item:hover {
-	background-color: #707070;
+	background-color: #666666;
 }
 
 .dropdown .dropdown-item > span {
