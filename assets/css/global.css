@@ -246,7 +246,7 @@ a {
 	margin-top: -6px;
 }
 
-.nav-dropdown .inner-box-border {
+.nav-dropdown > div {
 	padding: 0;
 	margin: 4px;
 }
@@ -332,8 +332,18 @@ a {
 
 .dropdown .dropdown-item {
 	display: block;
-	padding: 2px 4px;
-	background-color: #b8b8b8;
+	padding: 6px 8px 7px 8px;
+	background-color: #8b8b8b;
+	font-size: 90%;
+}
+
+.dropdown .dropdown-item:hover {
+	background-color: #707070;
+}
+
+.dropdown .dropdown-item > span {
+	display: flex;
+	align-items: center;
 }
 
 .tool-tip {
