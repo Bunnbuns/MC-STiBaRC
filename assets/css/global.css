@@ -165,8 +165,8 @@ a {
 
 .box-border {
     background-color: #c6c6c6;
-    border: 8px solid;
-    border-image: url(../images/border.png) 4 repeat;
+    border: 6px solid;
+    border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAWUlEQVQoU2WP4Q1AMQSEWat7mMsg9mCseyGhmueHXPtd1THdwtLcugWAy5nretoDk0QEnXPKlK7HkFBV6wczqzFj2HAbUsPd52Uv2BP6DBGZIAl7h5WOflE/+34sBispxMQAAAAASUVORK5CYII=') 3 repeat;
     image-rendering: pixelated;
     background-clip: padding-box;
 }
@@ -174,7 +174,7 @@ a {
 .inner-box-border {
     background-color: #8b8b8b;
     border: 2px solid;
-    border-image: url(../images/inner-border.png) 1 repeat;
+    border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKElEQVQYV2M0Nzf/z4AEGEECJ0+eZASJ/f///z+mQHd39/+SkhK4JgCr7BWdSCVjYQAAAABJRU5ErkJggg==') 1 repeat;
     image-rendering: pixelated;
 }
 
