@@ -201,7 +201,7 @@ function loadComments(id) {
 			var commentsHTML = '';
 			for (var key in comments) {
 				var image = "";
-				image = '<img src="' + comments[key].pfp + '"style="width:40px;height:40px;border-radius:50%;vertical-align:middle;margin-right:5px;" />';
+				image = '<img src="' + comments[key].pfp + '"style="width:40px;height:40px;border-radius:50%;vertical-align:middle;margin-right:8px;" />';
 				commentsHTML += '<div class="comment"><div><a class="comment-username" href="user.html?id=' + comments[key]['poster'] + '">'+image+comments[key]['poster'].replace(/&/g, "&amp;") + '</a></div><div class="content">' + emojiComment(comments[key]['content'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\r\n/g, "<br/>")) + '</div><a class="replyto light-text" href="javascript:replyto('+"'"+comments[key]['poster']+"'"+')">Reply</a></div>';
 			}
 			$('comments').innerHTML = commentsHTML;
