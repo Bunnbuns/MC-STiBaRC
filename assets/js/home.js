@@ -32,7 +32,9 @@ function toLink(id, item) {
 			.replace(/</g, "&lt;")
 			.replace(/>/g, "&gt;");
 		postsHTML +=
-			'<div class="post" tabindex="1"> <div class="flex" style="align-items: initial;"> <div> <a href="post.html?id=' +
+			'<div class="post" onclick="goToPost(' +
+			id +
+			')" tabindex="1"> <div class="flex" style="align-items: initial;"> <div> <a href="post.html?id=' +
 			id +
 			'">' +
 			emojiPost(title) +
@@ -62,7 +64,9 @@ function toFollowLink(id, item) {
 			.replace(/</g, "&lt;")
 			.replace(/>/g, "&gt;");
 		toFollowHTML +=
-			'<div class="post" tabindex="1"> <div class="flex" style="align-items: initial;"> <div> <a href="post.html?id=' +
+			'<div class="post" onclick="goToPost(' +
+			id +
+			')" tabindex="1"> <div class="flex" style="align-items: initial;"> <div> <a href="post.html?id=' +
 			id +
 			'">' +
 			emojiPost(title) +

@@ -52,28 +52,47 @@
         <div class="margin-small"></div>
 
         <main class="container">
-            <div class="flex" style="align-items: inital;">
-                <h2 class="text-sh">Recent Posts:</h2>
-                <span class="flex-grow"></span>
-                <span><button id="selectfeed" class="mc-button x-small"><span>Feed:&nbsp;&nbsp;<span id="selectfeedtext">GLOBAL</span></span></button>
-            </div>
-    
-            <div id="blob">
-    
-                <div id="posts"></div>
-    
-                <div id="loadmorecontainer" style="display: none;"><button onclick="loadMore();" class="mc-button block"><span>Load more</span></button></div>
-    
-            </div>
-    
-            <div id="followblob" style="display:none;">
-    
-                <div id="followedposts">
-                    <div><a href="login.html">Log in</a> to get your followed feed.</div>
+            
+            <h2 class="text-sh" id="postTitle">Loading...</h2>
+
+            <div class="postMeta">
+                <div class="pfpBlock">
+                    <img id="postPfp" class="pfp" src="./assets/images/Transparent.gif">
+                    <span id="postUsername">Loading...</span>
                 </div>
-    
-                <div id="followloadmorecontainer" style="display: none;"><button onclick="loadMoreFollow();" class="mc-button small block"><span>Load more</span></button></div>
-    
+                <div>
+                    <span id="postDate" class="light-text">Loading...</span>
+                </div>
+                <div class="badges">
+                    <span class="badge tool-tip light-text" id="edited" style="display: none;">Edited</span>
+                </div>
+            </div>
+            <div id="postContent">
+            </div>
+            <div id="attachment" style="display: none;">
+                <br>
+                <a class="mc-button small" onclick="getAttach(postData)" id="attachmentBtn">View attachment</a>
+                <br>
+            </div>
+            <div style="margin-bottom: .5rem;">
+                <br>
+                <a class="mc-button x-small" onclick="upvote()" title="Upvote"><span class="dropdown-arrow active"></span>&nbsp;&nbsp;<span id="upvotes">0</span>&nbsp;&nbsp;</a>
+                &nbsp;
+                <a class="mc-button x-small" onclick="downvote()" title="Downvote"><span class="dropdown-arrow"></span>&nbsp;&nbsp;<span id="downvotes">0</span>&nbsp;&nbsp;</a>
+            </div>
+            <div id="editlinkcontainer" style="margin-top: 1rem; display: none;">
+                <a class="mc-button x-small" id="editlink">Edit post</a>
+            </div>
+            <div class="light-text" id="client" style="margin: 1rem 0; display: none;"></div>
+            <h4>Comments:</h4>
+            <div id="comments">
+                
+            </div>
+            <div id="newcomment" class="loggedin" style="display: none;">
+                <div id="wait" style="display: none">Please wait before commenting again</div>
+                <h4>New comment:</h4>
+                <textarea class="text-input" id="comtent" name="comtent"></textarea><br><br>
+                <button class="mc-button small" id="commentbutton" onclick="postcomment(getAllUrlParams().id)">Submit</button><br>
             </div>
     
             <br><br><br><br>
@@ -91,7 +110,7 @@
     </footer>
 
     <script src="./assets/js/global.js"></script>
-    <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/post.js"></script>
 
 </body>
 </html>
