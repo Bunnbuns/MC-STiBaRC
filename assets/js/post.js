@@ -218,7 +218,7 @@ var htmlAbleUsernames = ["herronjo", "DomHupp", "Aldeenyo", "savaka", "alluthus"
 function buildPost(data, id) {
     document.title = data.title + " - STiBaRC";
     $("postTitle").innerHTML = data.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	$("postUsername").innerHTML = '<a href="user.html?id=' + data.poster + '">' + data.poster + '</a><span id="verified" title="Verified user" style="display:none">' + "&#10004;&#65039;</span>";
+	$("postUsername").innerHTML = '<a href="user.html?id=' + data.poster + '">' + data.poster + '</a><span id="verified" title="Verified user" style="display:none">' + '<img class="verify" src="./assets/images/verify.png"></span>';
 	checkVerified(data.poster);
     $("postDate").innerHTML = data.postdate;
     getUserPfp('post', data.poster);

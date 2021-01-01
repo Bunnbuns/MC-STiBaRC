@@ -413,6 +413,15 @@ a {
 	margin-right: 4px;
 }
 
+.verify {
+	display: inline-block;
+	padding: 1px 8px;
+	image-rendering: pixelated;
+	-ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+}
+
 .badges {
 	display: block;
 	margin: 10px 0 14px 0;
