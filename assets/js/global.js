@@ -47,6 +47,7 @@ function updateNavDropdownContent() {
 		$("loggedInAs").innerHTML = localStorage.getItem("username");
 		$("loggedInAs").title = "Logged in as " + localStorage.getItem("username");
 		//$("loggedInAs").href = "./user.html?id=" + localStorage.getItem("username");
+		$("userProfile").href = "./user.html?id=" + localStorage.getItem("username");
 		//$("navpfp").title = "Logged in as " + localStorage.getItem("username");
 	}
 }

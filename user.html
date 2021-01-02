@@ -51,31 +51,44 @@
         <div class="margin-small"></div>
 
         <main class="container">
-            <div class="flex" style="align-items: inital;">
-                <h2 class="text-sh">Recent Posts:</h2>
-                <span class="flex-grow"></span>
-                <span><button id="selectfeed" class="mc-button x-small"><span>Feed:&nbsp;&nbsp;<span id="selectfeedtext">GLOBAL</span></span></button>
-            </div>
-    
-            <div id="blob">
-    
-                <div id="posts"></div>
-    
-                <div id="loadmorecontainer" style="display: none;"><button onclick="loadMore();" class="mc-button block"><span>Load more</span></button></div>
-    
-            </div>
-    
-            <div id="followblob" style="display:none;">
-    
-                <div id="followedposts">
-                    <div><a href="login.html">Log in</a> to get your followed feed.</div>
+
+            <div class="profile">
+
+                <div class="pfpBlock flex">
+                    <img id="pfp" class="pfp" src="./assets/images/Transparent.gif">    
+                    <span class="userInfo">
+                        <div class="text-sh" id="username">Loading...</div>
+                        <div class="light-text">
+                            <span id="name" title="Real name"></span>
+                        </div>
+                    </span>
+                    &nbsp;
+                    <span class="userRight">
+                        <button id="follow" class="mc-button small">Loading</button>
+                    </span>
                 </div>
-    
-                <div id="followloadmorecontainer" style="display: none;"><button onclick="loadMoreFollow();" class="mc-button small block"><span>Load more</span></button></div>
-    
+                <div id="bio" style="display: none;">
+                    <h4 style="margin: .5rem 0;">Bio:</h4>
+                    <div id="bioText"></div>
+                    <div style="margin: 1rem 0;"></div>
+                </div>
+                <div>
+                    <div id="email"></div>
+                    <div id="birthday"></div>
+                    <div id="rank"></div>
+                    <div id="followers"></div>
+                    <div id="following"></div>
+                </div>
+
+                <h4>Posts:</h4>
+
+                <div id="posts">
+                    Loading...
+                </div>
+
             </div>
-    
-            <br><br><br><br>
+
+            <br><br><br><br><br>
     
         </main>
     
@@ -90,7 +103,7 @@
     </footer>
 
     <script src="./assets/js/global.js"></script>
-    <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/user.js"></script>
 
 </body>
 </html>

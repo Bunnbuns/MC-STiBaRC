@@ -29,9 +29,8 @@
                     <a class="mc-button small" href="./register.html"><span>Sign up</span></a>
                 </div>
                 <div class="loggedin">
-                    <!-- <button class="mc-button small" onclick="logout()"><span>Log out</span></button> -->
                     <div class="dropdown-btn" id="navDropdownBtn" tabindex="1">
-                        <span id="loggedInAs" class="text-sh"></span><span class="dropdown-arrow"></span>
+                        <span id="loggedInAs" class="text-sh no-select"></span><span class="dropdown-arrow"></span>
                     </div>
                 </div>
             </div>
@@ -42,7 +41,7 @@
         <div class="container nav-dropdown-container">
             <div class="dropdown nav-dropdown box-border" id="navDropdown" style="display: none;">
                 <div class="inner-box-border">
-                    <a class="dropdown-item" href="#"><span>Profile</span></a>
+                    <a class="dropdown-item" id="userProfile" href="#"><span>Profile</span></a>
                     <a class="dropdown-item" href="#"><span>Settings</span></a>
                     <div class="dropdown-item" onclick="logout()"><span>Logout</span></div>
                 </div>
@@ -86,7 +85,7 @@
             <div class="light-text" id="client" style="margin: 1rem 0; display: none;"></div>
             <h4>Comments:</h4>
             <div id="comments">
-                
+                Loading...
             </div>
             <div id="newcomment" class="loggedin" style="display: none;">
                 <div id="wait" style="display: none">Please wait before commenting again</div>
@@ -95,7 +94,7 @@
                 <button class="mc-button small" id="commentbutton" onclick="postcomment(getAllUrlParams().id)">Submit</button><br>
             </div>
     
-            <br><br><br><br>
+            <br><br><br><br><br><br>
     
         </main>
     

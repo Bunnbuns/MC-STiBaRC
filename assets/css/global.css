@@ -76,6 +76,12 @@ a {
     cursor: pointer;
 }
 
+.no-select {
+	-webkit-user-select: none;
+   	-ms-user-select: none;
+   	user-select: none;
+}
+
 .light-bg {
 	background: #2e2015 url("../images/dirt-light.png") repeat;
 	background-size: 64px;
@@ -160,6 +166,7 @@ a {
 	margin: 0 auto;
 	padding: 0 1rem;
 	box-sizing: border-box;
+	word-wrap: break-word;
 }
 
 .margin-small {
@@ -408,8 +415,8 @@ a {
 }
 
 .pfpBlock .pfp {
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 	margin-right: 4px;
 }
 
@@ -448,4 +455,19 @@ a {
 .comment .replyto {
 	display: inline-block;
 	margin-top: 6px;
+}
+
+.profile .post {
+	min-height: 23px;
+	margin-bottom: 6px;
+}
+
+.profile .pfp {
+	width: 65px;
+	height: 65px;
+	margin-right: 10px;
+}
+
+.profile .pfpBlock .userRight {
+	margin-left: 12px;
 }
