@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8" />
-    <title>Sign up - STiBaRC</title>
+    <title>New Post - STiBaRC</title>
     
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
     <link rel="icon" type="image/png" href="./fav.png">
@@ -20,26 +20,24 @@
         <main class="container" style="min-height: 95vh;">
             
             <br>
-            <h2 class="text-sh center">Sign up</h2>
+            <h2 class="text-sh center">New Post</h2>
             <br>
             <div class="form">
 
                 <div class="red-text text-sh center" id="errorMsg" style="display: none;"></div>
 
-                <h2 class="text-sh light-text">Name</h2>
-                <input id="name" class="text-input text-sh block" type="text" autofocus>
+                <h2 class="text-sh light-text">Title</h2>
+                <input id="title" class="text-input text-sh block"  type="text" autofocus>
 
-                <h2 class="text-sh light-text">Username</h2>
-                <input id="username" class="text-input text-sh block" type="text">
+                <h2 class="text-sh light-text">Content</h2>
+                <textarea id="content" class="text-input block" name="content" rows="8"></textarea>
 
-                <h2 class="text-sh light-text">Password</h2>
-                <input id="password" class="text-input text-sh block" type="password">
-
-                <h2 class="text-sh light-text">Repeat Password</h2>
-                <input id="repeat-password" class="text-input text-sh block" type="password">
-
-                <h2 class="text-sh light-text">Email</h2>
-                <input id="email" class="text-input text-sh block" type="email">
+                <div class="margin-small"></div>
+                
+                <div id="imageadd">
+                    <h2 class="text-sh light-text">Attach image/audio/video</h2>
+                    <input class="text-input light-text block" type="file" id="file" name="file" accept="image/*,video/*,audio/*">
+                </div>
                 
                 <div class="margin-x-large"></div>
                 <button class="mc-button block" id="login"><span>Submit</span></button>
@@ -49,10 +47,13 @@
             </div>
             <div class="margin-small"></div>
         </main>
+
+        <div class="margin-small"></div>
     
     </div>
 
     <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/newpost.js"></script>
 
 </body>
 </html>
