@@ -42,7 +42,7 @@ function toLink(id, item) {
 			item["poster"] +
 			'">' +
 			item["poster"] +
-			'</a> </div> </div> <span class="flex-grow"></span> <span><span style="color: #a8a8a8;">' +
+			'</a> </div> </div> <span class="flex-grow"></span> <span style="margin-left: 4px;"><span style="color: #a8a8a8;">' +
 			item["upvotes"] +
 			'</span><span style="color: #545454">/</span><span style="color: #a8a8a8;">' +
 			item["downvotes"] +
